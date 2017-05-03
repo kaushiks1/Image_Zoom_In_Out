@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_Zoom_In_Out" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-8q-sJ0">
+                                <color key="backgroundColor" red="0.34826705429999999" green="1" blue="0.87980783740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Image"/>
+                                <connections>
+                                    <action selector="buttonActionShowImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fl8-H3-RYM"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tb2-Cz-0B7">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLl-hn-Hyz">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USA.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="iHc-0u-6KK"/>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.34826705429999999" green="1" blue="0.87980783740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="iHc-0u-6KK" firstAttribute="centerY" secondItem="gLl-hn-Hyz" secondAttribute="centerY" id="CVJ-b2-fq7"/>
+                                            <constraint firstItem="iHc-0u-6KK" firstAttribute="width" secondItem="gLl-hn-Hyz" secondAttribute="width" id="Oai-f4-Zrb"/>
+                                            <constraint firstItem="iHc-0u-6KK" firstAttribute="height" secondItem="gLl-hn-Hyz" secondAttribute="height" multiplier="250/568" id="T60-EV-ATa"/>
+                                            <constraint firstItem="iHc-0u-6KK" firstAttribute="centerX" secondItem="gLl-hn-Hyz" secondAttribute="centerX" id="XK4-Lb-Apc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gLl-hn-Hyz" firstAttribute="width" secondItem="Tb2-Cz-0B7" secondAttribute="width" id="AzH-sz-jzJ"/>
+                                    <constraint firstItem="gLl-hn-Hyz" firstAttribute="leading" secondItem="Tb2-Cz-0B7" secondAttribute="leading" id="PGK-fg-rMB"/>
+                                    <constraint firstAttribute="trailing" secondItem="gLl-hn-Hyz" secondAttribute="trailing" id="hBj-SC-eej"/>
+                                    <constraint firstItem="gLl-hn-Hyz" firstAttribute="height" secondItem="Tb2-Cz-0B7" secondAttribute="height" id="i8I-Ou-CMi"/>
+                                    <constraint firstAttribute="bottom" secondItem="gLl-hn-Hyz" secondAttribute="bottom" id="ohR-tb-xc3"/>
+                                    <constraint firstItem="gLl-hn-Hyz" firstAttribute="top" secondItem="Tb2-Cz-0B7" secondAttribute="top" id="vUh-qE-iaz"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bwr-pR-ObA"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cKc-8q-sJ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E7Q-PM-MWY"/>
+                            <constraint firstItem="Tb2-Cz-0B7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="T6j-ZH-iT1"/>
+                            <constraint firstAttribute="trailing" secondItem="Tb2-Cz-0B7" secondAttribute="trailing" id="Uhn-6p-LFk"/>
+                            <constraint firstItem="Tb2-Cz-0B7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XaV-hX-3je"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tb2-Cz-0B7" secondAttribute="bottom" id="bp3-1b-eRH"/>
+                            <constraint firstItem="cKc-8q-sJ0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="brX-Wd-73Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgScrollView" destination="Tb2-Cz-0B7" id="rVM-Rf-2n3"/>
+                        <outlet property="imageViewOutlet" destination="gLl-hn-Hyz" id="fFo-YD-hd3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.125" y="122.53521126760563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="USA.jpg" width="610" height="640"/>
+    </resources>
+</document>
